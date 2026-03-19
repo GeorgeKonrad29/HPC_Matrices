@@ -111,12 +111,12 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    printf("=== Multiplicación de Matrices (2 hilos) ===\n");
+
     printf("Tamaño de las matrices: %dx%d\n\n", n, n);
 
     srand((unsigned int)time(NULL));
 
-    printf("Creando matrices...\n");
+    
     int **A = crear_matriz(n);
     int **B = crear_matriz(n);
     int **C = crear_matriz(n);
@@ -129,15 +129,15 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    printf("Llenando matrices con valores aleatorios...\n");
+
     llenar_matriz(A, n);
     llenar_matriz(B, n);
 
 
 
-    printf("\nMultiplicando matrices C = A × B con %d hilos...\n", 4);
+    printf("\nMultiplicando matrices C = A × B con %d hilos...\n", 8);
     double inicio = wall_time_seconds();
-    if (multiplicar_matrices_nhilos(A, B, C, n, 4) != 0) {
+    if (multiplicar_matrices_nhilos(A, B, C, n, 8) != 0) {
         printf("Error: no se pudieron crear los hilos.\n");
         liberar_matriz(A, n);
         liberar_matriz(B, n);
@@ -150,12 +150,12 @@ int main(int argc, char *argv[]) {
     printf("Tiempo de multiplicación: %.4f segundos\n\n", tiempo);
 
 
-    printf("\nLiberando memoria...\n");
+
     liberar_matriz(A, n);
     liberar_matriz(B, n);
     liberar_matriz(C, n);
 
-    printf("¡Programa completado exitosamente!\n");
+
 
     return 0;
 }

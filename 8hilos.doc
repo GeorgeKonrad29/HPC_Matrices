@@ -1,0 +1,524 @@
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 1.0870 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 4.2922 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 12.1060 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 21.9784 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 44.1832 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 62.3125 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 108.3658 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 143.0793 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 216.6861 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 1.0863 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 4.3244 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 12.2324 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 22.0815 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 44.4233 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 62.3030 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 108.8921 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 142.2639 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 215.4139 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 1.0964 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 4.3531 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 12.1860 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 22.1056 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 44.1421 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 62.6785 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 108.1413 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 141.5649 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 214.8050 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 1.0990 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 4.3199 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 12.1762 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 21.9972 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 44.1262 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 62.1065 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 107.8128 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 142.4976 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 215.5814 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 1.0638 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 4.3087 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 12.1204 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 21.9270 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 44.0362 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 62.3252 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 107.6413 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 142.3368 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 214.6184 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 1.1156 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 4.4436 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 12.3038 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 22.3811 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 44.3685 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 62.2833 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 107.5651 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 141.1211 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 217.3996 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 1.0953 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 4.2753 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 11.7064 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 20.8161 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 38.5685 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 57.6504 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 91.5884 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 123.2032 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 174.1196 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 1.1714 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 4.3971 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 12.3916 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 22.0564 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 44.1040 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 61.7884 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 107.5533 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 122.0963 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 174.3112 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 1.1782 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 4.4137 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 12.4264 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 22.1312 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 44.1295 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 61.9497 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 103.2227 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 123.6298 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 174.8033 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 1.1672 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 4.3772 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 12.2045 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 22.0694 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 43.9347 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 8 hilos...
+Tiempo de multiplicación: 63.2404 segundos
+
+
+

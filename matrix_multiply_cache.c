@@ -44,7 +44,7 @@ int** multiplicar_matrices(int** A, int**  B, int n) {
         for (int j = 0; j < n; j++) {
             C[i][j] = 0;
             for (int k = 0; k < n; k++) {
-                C[i][j] += A[i][k] * B[k][j];
+                C[i][j] += A[i][k] * B[j][k];
             }
         }
     }
@@ -74,12 +74,12 @@ int main(int argc, char* argv[]) {
     srand(time(NULL));
     
     // Crear matrices
-    
+    printf("Creando matrices...\n");
     int** A = crear_matriz(n);
     int** B = crear_matriz(n);
     
     // Llenar matrices con valores aleatorios
-    
+    printf("Llenando matrices con valores aleatorios...\n");
     llenar_matriz(A, n);
     llenar_matriz(B, n);
     
@@ -94,7 +94,7 @@ int main(int argc, char* argv[]) {
     printf("Tiempo de multiplicación: %.4f segundos\n\n", tiempo);
     
     if(atoi(argv[1]) <= 10) {
-        
+        printf("Matriz A:\n");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 printf("%4d ", A[i][j]);
@@ -102,7 +102,7 @@ int main(int argc, char* argv[]) {
             printf("\n");
         }
         
-        
+        printf("\nMatriz B:\n");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 printf("%4d ", B[i][j]);
@@ -110,17 +110,19 @@ int main(int argc, char* argv[]) {
             printf("\n");
         }
         
-        
+        printf("\nMatriz C (Resultado):\n");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 printf("%4d ", C[i][j]);
             }
             printf("\n");
         }
-    } 
+    } else {
+        printf("Matrices demasiado grandes para mostrar.\n");
+    }
     
     // Liberar memoria
-    
+    printf("\nLiberando memoria...\n");
     liberar_matriz(A, n);
     liberar_matriz(B, n);
     liberar_matriz(C, n);

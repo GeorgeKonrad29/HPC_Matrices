@@ -1,0 +1,539 @@
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 1.2903 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 4.1879 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 12.5035 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 22.7694 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 47.8862 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 90.8402 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 120.7234 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 137.6485 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 191.0591 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 1.1147 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 4.2878 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 12.3779 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 23.6423 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 48.1579 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 66.4998 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 104.2047 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 138.6572 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 197.6759 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 1.0865 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 4.2725 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 12.5668 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 23.3250 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 45.7406 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 66.5937 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 109.2900 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 137.2678 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 194.5078 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 1.1047 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 4.4077 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 12.5402 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 23.3590 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 45.7684 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 66.4606 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 106.5137 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 131.6838 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 199.0118 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 1.0855 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 4.2903 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 12.5478 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 24.7445 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 45.6624 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 68.9973 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 108.8390 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 130.5658 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 196.6714 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 1.1300 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 4.2941 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 12.6093 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 23.2971 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 45.7011 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 67.7318 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 108.2089 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 131.2794 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 191.0806 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 1.1171 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 4.2791 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 12.3466 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 23.6762 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 45.6085 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 66.1539 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 113.2300 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 145.5573 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 229.6631 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 1.0642 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 4.5538 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 12.2424 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 23.8433 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 46.1164 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 68.9500 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 112.7689 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 148.8081 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 225.9037 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 1.0985 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 4.3405 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 12.3060 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 23.3243 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 45.6405 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 66.2346 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 113.8153 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 150.5428 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 224.2141 segundos
+
+Tamaño de las matrices: 1000x1000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 1.0887 segundos
+
+Tamaño de las matrices: 1500x1500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 4.3499 segundos
+
+Tamaño de las matrices: 2000x2000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 12.2374 segundos
+
+Tamaño de las matrices: 2500x2500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 23.2805 segundos
+
+Tamaño de las matrices: 3000x3000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 45.3030 segundos
+
+Tamaño de las matrices: 3500x3500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 66.0443 segundos
+
+Tamaño de las matrices: 4000x4000
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 112.1627 segundos
+
+Tamaño de las matrices: 4500x4500
+
+
+Multiplicando matrices C = A × B con 6 hilos...
+Tiempo de multiplicación: 147.9189 segundos
+
+Tamaño de las matrices: 5000x5000
+
+
+
+
