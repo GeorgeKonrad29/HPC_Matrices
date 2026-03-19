@@ -8,14 +8,6 @@ for j in {1..10}
 do
 for i in 1000 1500 2000 2500 3000 3500 4000 4500 5000
 do
-./matrix_multiply_ofast $i >> ofast.doc
-done
-done
-
-for j in {1..10}
-do
-for i in 6000 7000
-do
 ./matrix_multiply $i >> standar.doc
 ./matrix_multiply_cache $i >> cache.doc
 ./matrix_multiply_ofast $i >> ofast.doc
