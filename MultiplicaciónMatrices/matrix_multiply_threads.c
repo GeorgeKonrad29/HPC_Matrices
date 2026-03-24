@@ -10,6 +10,7 @@ typedef struct {
     int n;
     int row_start;
     int row_end;
+    int **u_old;  // Buffer local para cada hilo
 } WorkerArgs;
 
 static double wall_time_seconds(void) {
@@ -21,19 +22,20 @@ static double wall_time_seconds(void) {
 }
 
 static int **crear_matriz(int n) {
-    int **matriz = (int **)malloc(n * sizeof(int *));
+    // Un solo malloc: punteros + todos los datos
+    size_t punteros_size = n * sizeof(int *);
+    size_t datos_size = n * n * sizeof(int);
+    int **matriz = (int **)malloc(punteros_size + datos_size);
     if (!matriz) {
         return NULL;
     }
+    
+    // Los datos comienzan después del array de punteros
+    int *data = (int *)(matriz + n);
+    
+    // Hacer que cada puntero apunte a su fila en el bloque de datos
     for (int i = 0; i < n; i++) {
-        matriz[i] = (int *)malloc(n * sizeof(int));
-        if (!matriz[i]) {
-            for (int j = 0; j < i; j++) {
-                free(matriz[j]);
-            }
-            free(matriz);
-            return NULL;
-        }
+        matriz[i] = data + i * n;
     }
     return matriz;
 }
@@ -42,9 +44,7 @@ static void liberar_matriz(int **matriz, int n) {
     if (!matriz) {
         return;
     }
-    for (int i = 0; i < n; i++) {
-        free(matriz[i]);
-    }
+    // Un solo free ya que todo está en un bloque contiguo
     free(matriz);
 }
 
@@ -59,24 +59,47 @@ static void llenar_matriz(int **matriz, int n) {
 
 static void *multiplicar_parcial(void *args_ptr) {
     WorkerArgs *args = (WorkerArgs *)args_ptr;
+    
+    // Calcular en el buffer local u_old (privado del hilo)
     for (int i = args->row_start; i < args->row_end; i++) {
         for (int j = 0; j < args->n; j++) {
             int sum = 0;
             for (int k = 0; k < args->n; k++) {
                 sum += args->A[i][k] * args->B[k][j];
             }
-            args->C[i][j] = sum;
+            args->u_old[i][j] = sum;
         }
     }
+    
+    // Copiar del buffer local al resultado compartido C
+    for (int i = args->row_start; i < args->row_end; i++) {
+        for (int j = 0; j < args->n; j++) {
+            args->C[i][j] = args->u_old[i][j];
+        }
+    }
+    
     return NULL;
 }
 
 static int multiplicar_matrices_nhilos(int **A, int **B, int **C, int n, int numHilos) {
     pthread_t threads[numHilos];
     WorkerArgs args[numHilos];
+    int **u_old_buffers[numHilos];  // Array de buffers locales
 
     int chunk_size = n / numHilos;
     int remaining_rows = n % numHilos;
+
+    // Asignar un buffer privado (u_old) para cada hilo
+    for (int i = 0; i < numHilos; i++) {
+        u_old_buffers[i] = crear_matriz(n);
+        if (!u_old_buffers[i]) {
+            // Liberar los buffers ya asignados en caso de error
+            for (int j = 0; j < i; j++) {
+                liberar_matriz(u_old_buffers[j], n);
+            }
+            return -1;
+        }
+    }
 
     for (int i = 0; i < numHilos; i++) {
         args[i].A = A;
@@ -88,13 +111,24 @@ static int multiplicar_matrices_nhilos(int **A, int **B, int **C, int n, int num
         if (i == numHilos - 1) {
             args[i].row_end += remaining_rows;
         }
+        args[i].u_old = u_old_buffers[i];  // Asignar buffer local del hilo
         if (pthread_create(&threads[i], NULL, multiplicar_parcial, &args[i]) != 0) {
+            // Liberar buffers en caso de error
+            for (int j = 0; j < numHilos; j++) {
+                liberar_matriz(u_old_buffers[j], n);
+            }
             return -1;
         }
     }
     for (int i = 0; i < numHilos; i++) {
         pthread_join(threads[i], NULL);
     }
+    
+    // Liberar buffers locales
+    for (int i = 0; i < numHilos; i++) {
+        liberar_matriz(u_old_buffers[i], n);
+    }
+    
     return 0;
 }
 

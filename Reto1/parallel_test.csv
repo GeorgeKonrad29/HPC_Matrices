@@ -1,0 +1,3 @@
+Run,Mode,Workers,K,NK,Iteraciones,Tiempo(s),Error_Jacobi,Error_Discretizacion
+1,threads,2,5,33,3088,0.034009,1.01253e-07,0.000151292
+1,processes,2,5,33,3083,0.445609,1.03726e-07,0.000151294

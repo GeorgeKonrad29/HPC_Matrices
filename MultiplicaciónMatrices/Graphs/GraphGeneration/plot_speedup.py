@@ -18,8 +18,10 @@ def extract_standard_data():
     """Extrae los datos estándar del CSV"""
     standard_data = {}
     
+    script_dir = Path(__file__).parent
+    csv_path = script_dir / 'resultados.csv'
     try:
-        with open('resultados.csv', 'r') as f:
+        with open(csv_path, 'r') as f:
             reader = csv.DictReader(f)
             for row in reader:
                 if row['Archivo'] == 'standar.doc':
@@ -43,8 +45,10 @@ def calculate_speedup(csv_file, standard_data):
     """Calcula el speedup desde el CSV"""
     speedup_data = defaultdict(lambda: defaultdict(list))
     
+    script_dir = Path(__file__).parent
+    csv_path = script_dir / csv_file
     try:
-        with open(csv_file, 'r') as f:
+        with open(csv_path, 'r') as f:
             reader = csv.DictReader(f)
             for row in reader:
                 archivo = row['Archivo'].replace('.doc', '')
@@ -88,7 +92,8 @@ def plot_speedup(speedup_data, standard_data):
         '4procesos': '#8c564b',
         '6procesos': '#e377c2',
         '8procesos': '#7f7f7f',
-        'ofast': '#bcbd22'
+        'ofast': '#bcbd22',
+        'hilos82': '#17becf'
     }
     
     linestyles = {
@@ -100,7 +105,8 @@ def plot_speedup(speedup_data, standard_data):
         '4procesos': '-',
         '6procesos': '-',
         '8procesos': '-',
-        'ofast': '-'
+        'ofast': '-',
+        'hilos82': '-'
     }
     
     markers = {
@@ -155,7 +161,8 @@ def plot_speedup(speedup_data, standard_data):
     plt.tight_layout()
     
     # Guardar figura
-    output_file = 'speedup_graph.png'
+    script_dir = Path(__file__).parent
+    output_file = script_dir / 'speedup_graph.png'
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     print(f"✓ Gráfica guardada en: {output_file}")
 

@@ -1050,3 +1050,120 @@ Tiempo de multiplicación: 390.8769 segundos
 Matrices demasiado grandes para mostrar.
 
 
+=== Multiplicación de Matrices Cuadradas ===
+Tamaño de las matrices: 1000x1000
+
+Creando matrices...
+Llenando matrices con valores aleatorios...
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 3.4172 segundos
+
+Matrices demasiado grandes para mostrar.
+
+Liberando memoria...
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas ===
+Tamaño de las matrices: 1500x1500
+
+Creando matrices...
+Llenando matrices con valores aleatorios...
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 11.7493 segundos
+
+Matrices demasiado grandes para mostrar.
+
+Liberando memoria...
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas ===
+Tamaño de las matrices: 2000x2000
+
+Creando matrices...
+Llenando matrices con valores aleatorios...
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 25.7134 segundos
+
+Matrices demasiado grandes para mostrar.
+
+Liberando memoria...
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas ===
+Tamaño de las matrices: 2500x2500
+
+Creando matrices...
+Llenando matrices con valores aleatorios...
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 50.3931 segundos
+
+Matrices demasiado grandes para mostrar.
+
+Liberando memoria...
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas ===
+Tamaño de las matrices: 3000x3000
+
+Creando matrices...
+Llenando matrices con valores aleatorios...
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 90.4935 segundos
+
+Matrices demasiado grandes para mostrar.
+
+Liberando memoria...
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas ===
+Tamaño de las matrices: 3500x3500
+
+Creando matrices...
+Llenando matrices con valores aleatorios...
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 138.5736 segundos
+
+Matrices demasiado grandes para mostrar.
+
+Liberando memoria...
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas ===
+Tamaño de las matrices: 4000x4000
+
+Creando matrices...
+Llenando matrices con valores aleatorios...
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 208.6304 segundos
+
+Matrices demasiado grandes para mostrar.
+
+Liberando memoria...
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas ===
+Tamaño de las matrices: 4500x4500
+
+Creando matrices...
+Llenando matrices con valores aleatorios...
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 297.9978 segundos
+
+Matrices demasiado grandes para mostrar.
+
+Liberando memoria...
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas ===
+Tamaño de las matrices: 5000x5000
+
+Creando matrices...
+Llenando matrices con valores aleatorios...
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 408.2865 segundos
+
+Matrices demasiado grandes para mostrar.
+
+Liberando memoria...
+¡Programa completado exitosamente!

@@ -10,8 +10,10 @@ def extract_execution_times(csv_file):
     """Extrae tiempos de ejecución del CSV"""
     time_data = defaultdict(lambda: defaultdict(list))
     
+    script_dir = Path(__file__).parent
+    csv_path = script_dir / csv_file
     try:
-        with open(csv_file, 'r') as f:
+        with open(csv_path, 'r') as f:
             reader = csv.DictReader(f)
             for row in reader:
                 archivo = row['Archivo'].replace('.doc', '')
@@ -121,7 +123,8 @@ def plot_execution_times(time_data):
     plt.tight_layout()
     
     # Guardar figura
-    output_file = 'execution_time_graph.png'
+    script_dir = Path(__file__).parent
+    output_file = script_dir / 'execution_time_graph.png'
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     print(f"✓ Gráfica guardada en: {output_file}")
 

@@ -64,9 +64,9 @@ def extract_data(file_path):
     
     return results
 
-def save_to_csv(all_data):
+def save_to_csv(all_data, output_dir):
     """Guarda los datos en CSV"""
-    output_file = "resultados.csv"
+    output_file = output_dir / "resultados.csv"
     
     try:
         with open(output_file, 'w', newline='') as f:
@@ -88,12 +88,12 @@ def save_to_csv(all_data):
         print(f"Error guardando CSV: {e}")
         return False
 
-def save_to_excel(all_data):
+def save_to_excel(all_data, output_dir):
     """Guarda los datos en Excel"""
     if not OPENPYXL_AVAILABLE:
         return False
     
-    output_file = "resultados.xlsx"
+    output_file = output_dir / "resultados.xlsx"
     
     try:
         wb = Workbook()
@@ -137,11 +137,14 @@ def save_to_excel(all_data):
         return False
 
 def main():
-    # Directorio actual
-    work_dir = Path.cwd()
+    # Directorio del script (GraphGeneration)
+    script_dir = Path(__file__).parent
+    
+    # Directorio de datos (Results) - ../../../Results
+    data_dir = script_dir.parent.parent / "Results"
     
     # Archivos a procesar
-    doc_files = sorted(work_dir.glob('*.doc'))
+    doc_files = sorted(data_dir.glob('*.doc'))
     
     if not doc_files:
         print("No se encontraron archivos .doc")
@@ -180,9 +183,10 @@ def main():
     print("GUARDANDO DATOS...")
     print("=" * 70)
     
-    save_to_csv(all_data)
+    output_dir = Path(__file__).parent
+    save_to_csv(all_data, output_dir)
     if OPENPYXL_AVAILABLE:
-        save_to_excel(all_data)
+        save_to_excel(all_data, output_dir)
     else:
         print("⚠ openpyxl no está instalado. Solo se guardó CSV.")
         print("  Instala con: pip install openpyxl")
