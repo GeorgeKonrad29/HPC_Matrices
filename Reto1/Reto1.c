@@ -85,13 +85,14 @@ static void solve_direct_tridiagonal(int nk, double h2, double ua, double ub, co
 
 static int jacobi_poisson_1d(int nk, double h2, const double *f, double *u, double tol) {
 
-	double sum_sq_change = 0.0;
 	double sum_sq_res = 0.0;
+	double sum_sq_change = 0.0;
 	double utemp=0.0;
 	double utempminusone=0.0;
 	int it = 0;
 	while (1) {
-
+		
+		
 		utempminusone = u[0];
 		sum_sq_change = 0.0;
 		for (int i = 1; i < nk - 1; i++) {
@@ -103,7 +104,7 @@ static int jacobi_poisson_1d(int nk, double h2, const double *f, double *u, doub
 		}
 
 		
-		sum_sq_change = 0.0;
+		sum_sq_res = 0.0;
 		for (int i = 1; i < nk - 1; i++) {
 			double ri = (-u[i - 1] + 2.0 * u[i] - u[i + 1]) / h2 - f[i];
 			sum_sq_res += ri * ri;
@@ -117,10 +118,10 @@ static int jacobi_poisson_1d(int nk, double h2, const double *f, double *u, doub
 			break;
 		}
 
-		if (it >= 1000000) {
+/*		if (it >= 1000000) {
 			fprintf(stderr, "Advertencia: Jacobi alcanzó el máximo de iteraciones.\n");
 			break;
-		}
+		}*/
 	}
 
 
@@ -136,6 +137,17 @@ int main(int argc, char *argv[]) {
 			return EXIT_FAILURE;
 		}
 	}
+	double tol = 1.0e-6;
+	if (argc > 2) {
+		tol = atof(argv[2]);
+		if (tol <= 0.0) {
+			fprintf(stderr, "Error: Tolerance must be positive.\n");
+			return EXIT_FAILURE;
+		}
+	}
+	if (argc > 3) {
+		fprintf(stderr, "Advertencia: se ignorarán argumentos adicionales.\n");
+	}
 
 	struct timespec ts_start, ts_end;
 	if (clock_gettime(CLOCK_MONOTONIC, &ts_start) != 0) {
@@ -147,7 +159,7 @@ int main(int argc, char *argv[]) {
 	double b = 1.0;
 	double ua = 0.0;
 	double ub = 0.0;
-	double tol = 1.0e-6;
+	
 
 	int nk = (1 << k) + 1;
 	double hk = (b - a) / (double)(nk - 1);
@@ -211,14 +223,16 @@ int main(int argc, char *argv[]) {
 	printf("  Walltime (MONOTONIC) = %.6f seconds\n", elapsed_time);
 
 	// Tabla de resultados comentada para evitar expansión
-	/*printf("\n");
+	/*
+	printf("\n");
 	printf("    I          X    U_Exact   U_Direct   U_Jacobi\n");
 	printf("\n");
 	for (int i = 0; i < nk; i++) {
 		printf(" %4d %10.4f %10.4g %10.4g %10.4g\n",
 			   i + 1, xk[i], uek[i], udk[i], ujk[i]);
 	}
-	printf("\n");*/
+	printf("\n");
+	*/
 	
 
 	printf("\n");

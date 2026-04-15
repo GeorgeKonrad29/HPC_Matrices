@@ -155,7 +155,7 @@ static void *jacobi_worker(void *arg) {
             (*ctx->it_num)++;
             *ctx->last_residual = sqrt(total_res / (double)ctx->nk);
 
-            if (*ctx->last_residual <= ctx->tol || *ctx->it_num >= MAX_IT) {
+            if (*ctx->last_residual <= ctx->tol ) {
                 *ctx->stop_flag = 1;
                 if (*ctx->it_num >= MAX_IT && *ctx->last_residual > ctx->tol) {
                     fprintf(stderr, "Advertencia: Jacobi alcanzó el máximo de iteraciones.\n");
@@ -271,6 +271,14 @@ int main(int argc, char *argv[]) {
     if (argc > 2) {
         nthreads = atoi(argv[2]);
     }
+    double tol = 1.0e-6;
+    if (argc > 3) {
+        tol = atof(argv[3]);
+        if (tol <= 0.0) {
+            fprintf(stderr, "Error: Tolerance must be positive.\n");
+            return EXIT_FAILURE;
+        }
+    }
 
     if (k < 1) {
         fprintf(stderr, "Error: K debe ser >= 1.\n");
@@ -300,7 +308,7 @@ int main(int argc, char *argv[]) {
     double b = 1.0;
     double ua = 0.0;
     double ub = 0.0;
-    double tol = 1.0e-6;
+    
     double hk = (b - a) / (double)(nk - 1);
     double h2 = hk * hk;
 

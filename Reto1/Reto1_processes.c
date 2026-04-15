@@ -257,10 +257,10 @@ static int jacobi_poisson_1d_processes(int nk, double h2, const double *f, doubl
             break;
         }
 
-        if (it >= MAX_IT) {
+        /*if (it >= MAX_IT) {
             fprintf(stderr, "Advertencia: Jacobi alcanzó el máximo de iteraciones.\n");
             break;
-        }
+        }*/
 
         for (int i = 1; i < nk - 1; i++) {
             u_old[i] = u_new[i];
@@ -310,6 +310,14 @@ int main(int argc, char *argv[]) {
     if (argc > 2) {
         nproc = atoi(argv[2]);
     }
+    double tol = 1.0e-6;
+    if (argc > 3) {
+        tol = atof(argv[3]);
+        if (tol <= 0.0) {
+            fprintf(stderr, "Error: Tolerance must be positive.\n");
+            return EXIT_FAILURE;
+        }
+    }
 
     if (k < 1) {
         fprintf(stderr, "Error: K debe ser >= 1.\n");
@@ -339,7 +347,6 @@ int main(int argc, char *argv[]) {
     double b = 1.0;
     double ua = 0.0;
     double ub = 0.0;
-    double tol = 1.0e-6;
     double hk = (b - a) / (double)(nk - 1);
     double h2 = hk * hk;
 
