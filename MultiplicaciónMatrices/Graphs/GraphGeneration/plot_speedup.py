@@ -93,7 +93,8 @@ def plot_speedup(speedup_data, standard_data):
         '6procesos': '#e377c2',
         '8procesos': '#7f7f7f',
         'ofast': '#bcbd22',
-        'hilos82': '#17becf'
+        'hilos82': '#17becf',
+        'openmp': '#1f77b4',
     }
     
     linestyles = {
@@ -106,7 +107,8 @@ def plot_speedup(speedup_data, standard_data):
         '6procesos': '-',
         '8procesos': '-',
         'ofast': '-',
-        'hilos82': '-'
+        'hilos82': '-',
+        'openmp': '-',
     }
     
     markers = {
@@ -118,7 +120,9 @@ def plot_speedup(speedup_data, standard_data):
         '4procesos': 's',
         '6procesos': '^',
         '8procesos': 'D',
-        'ofast': 'X'
+        'ofast': 'X',
+        'hilos82': 'P',
+        'openmp': 'X',
     }
     
     # Crear figura

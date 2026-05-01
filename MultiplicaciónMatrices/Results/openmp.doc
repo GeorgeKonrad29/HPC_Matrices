@@ -1,0 +1,945 @@
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 11.1449 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 19.4729 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 38.9217 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 53.5094 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 96.0784 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 124.3501 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 5000x5000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 194.6644 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1000x1000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 0.9803 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1500x1500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 3.8600 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 11.0388 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 19.4811 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 39.3484 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 55.9201 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 96.7368 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 146.0125 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 5000x5000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 217.3833 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1000x1000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 0.9830 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1500x1500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 3.9632 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 11.1107 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 21.5318 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 41.4451 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 58.0818 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 100.7843 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 133.0125 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 5000x5000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 198.2185 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1000x1000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 1.0099 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1500x1500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 3.8893 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 11.0830 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 19.5067 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 39.5031 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 55.3283 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 97.2104 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 124.7045 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 5000x5000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 193.2803 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1000x1000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 0.9860 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1500x1500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 3.8670 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 11.0044 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 19.5477 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 39.6428 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 54.4903 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 96.9007 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 124.3234 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 5000x5000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 192.9659 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1000x1000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 0.9943 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1500x1500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 3.8484 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 11.0263 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 19.4197 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 39.6788 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 54.3462 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 97.4286 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 126.9535 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 5000x5000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 193.2520 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1000x1000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 0.9802 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1500x1500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 3.8524 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 11.0342 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 19.7978 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 39.6596 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 54.4925 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 96.7704 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 124.8784 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 5000x5000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 193.1030 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1000x1000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 0.9900 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1500x1500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 3.9177 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 11.0090 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 19.4210 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 39.6327 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 54.2838 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 97.4869 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 124.7987 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 5000x5000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 227.1401 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1000x1000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 1.2306 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1500x1500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 4.5458 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 11.7647 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 19.7741 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 46.0800 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 63.0717 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 105.0099 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 125.6164 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 5000x5000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 193.8336 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1000x1000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 1.1245 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1500x1500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 3.8335 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 10.9957 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 19.4632 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 40.8658 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 58.0350 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 98.8410 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 135.5908 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 5000x5000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 200.5319 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1000x1000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 0.8692 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1500x1500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 3.6022 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 10.6891 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 19.1227 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 39.3040 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 58.2668 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 99.9838 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 144.1317 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 5000x5000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 193.5274 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1000x1000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 0.9459 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 1500x1500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 3.8246 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2000x2000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 10.9813 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 2500x2500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 19.4990 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3000x3000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 39.4016 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 3500x3500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 54.2158 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4000x4000
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 96.7450 segundos
+
+¡Programa completado exitosamente!
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 4500x4500
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 124.6183 segundos
+
+¡Programa completado exitosamente!

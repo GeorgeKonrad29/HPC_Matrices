@@ -1,0 +1,217 @@
+--------------------------------------------------------------------------------
+-- Metadata
+--------------------------------------------------------------------------------
+Invocation:       /usr/bin/cg_annotate /home/georgekonrad/Desktop/HPC_Matrices/MultiplicaciónMatrices/profiling_results_20260427_210811/cachegrind.out
+Command:          /home/georgekonrad/Desktop/HPC_Matrices/MultiplicaciónMatrices/matrix_multiply_openmp_profile 300
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Threshold:        0.1%
+Annotation:       on
+
+--------------------------------------------------------------------------------
+-- Summary
+--------------------------------------------------------------------------------
+Ir__________________ 
+
+237,190,073 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+-- File:function summary
+--------------------------------------------------------------------------------
+  Ir_________________________  file:function
+
+< 193,155,324 (81.4%,  81.4%)  /home/georgekonrad/Desktop/HPC_Matrices/MultiplicaciónMatrices/matrix_multiply_openmp.c:
+  190,441,536 (80.3%)            multiplicar_matrices_omp._omp_fn.0
+    2,703,636  (1.1%)            llenar_matriz
+
+<  28,907,676 (12.2%,  93.6%)  /usr/src/debug/gcc/gcc/libgomp/config/linux/wait.h:
+   17,002,304  (7.2%)            gomp_barrier_wait_end
+   11,905,372  (5.0%)            gomp_team_barrier_wait_end
+
+<  10,304,706  (4.3%,  98.0%)  ???:
+    5,042,864  (2.1%)            random_r
+    3,420,000  (1.4%)            random
+    1,080,000  (0.5%)            rand
+      717,982  (0.3%)            ???
+
+<   4,818,014  (2.0%, 100.0%)  /usr/src/debug/gcc/gcc/libgomp/config/linux/x86/futex.h:
+    2,833,752  (1.2%)            gomp_barrier_wait_end
+    1,984,262  (0.8%)            gomp_team_barrier_wait_end
+
+--------------------------------------------------------------------------------
+-- Function:file summary
+--------------------------------------------------------------------------------
+  Ir_________________________  function:file
+
+> 190,441,536 (80.3%,  80.3%)  multiplicar_matrices_omp._omp_fn.0:/home/georgekonrad/Desktop/HPC_Matrices/MultiplicaciónMatrices/matrix_multiply_openmp.c
+
+>  19,836,173  (8.4%,  88.7%)  gomp_barrier_wait_end:
+   17,002,304  (7.2%)            /usr/src/debug/gcc/gcc/libgomp/config/linux/wait.h
+    2,833,752  (1.2%)            /usr/src/debug/gcc/gcc/libgomp/config/linux/x86/futex.h
+
+>  13,889,846  (5.9%,  94.5%)  gomp_team_barrier_wait_end:
+   11,905,372  (5.0%)            /usr/src/debug/gcc/gcc/libgomp/config/linux/wait.h
+    1,984,262  (0.8%)            /usr/src/debug/gcc/gcc/libgomp/config/linux/x86/futex.h
+
+>   5,042,864  (2.1%,  96.6%)  random_r:???
+
+>   3,420,000  (1.4%,  98.1%)  random:???
+
+>   2,703,636  (1.1%,  99.2%)  llenar_matriz:/home/georgekonrad/Desktop/HPC_Matrices/MultiplicaciónMatrices/matrix_multiply_openmp.c
+
+>   1,080,000  (0.5%,  99.7%)  rand:???
+
+>     717,982  (0.3%, 100.0%)  ???:???
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/georgekonrad/Desktop/HPC_Matrices/MultiplicaciónMatrices/matrix_multiply_openmp.c
+--------------------------------------------------------------------------------
+Ir_________________ 
+
+          .          #include <stdio.h>
+          .          #include <stdlib.h>
+          .          #include <time.h>
+          .          #include <omp.h>
+          .          
+          .          // Función para crear una matriz
+         12  (0.0%)  int** crear_matriz(int n) {
+         11  (0.0%)      int** matriz = (int**)malloc(n * sizeof(int*));
+      2,708  (0.0%)      for (int i = 0; i < n; i++) {
+      2,710  (0.0%)          matriz[i] = (int*)malloc(n * sizeof(int));
+          .              }
+          .              return matriz;
+         14  (0.0%)  }
+          .          
+          .          // Función para liberar la memoria de una matriz
+         12  (0.0%)  void liberar_matriz(int** matriz, int n) {
+      2,718  (0.0%)      for (int i = 0; i < n; i++) {
+      1,800  (0.0%)          free(matriz[i]);
+          .              }
+          6  (0.0%)      free(matriz);
+          9  (0.0%)  }
+          .          
+          .          // Función para llenar la matriz con valores aleatorios
+      1,820  (0.0%)  void llenar_matriz(int** matriz, int n) {
+      1,804  (0.0%)      for (int i = 0; i < n; i++) {
+    540,000  (0.2%)          for (int j = 0; j < n; j++) {
+  2,160,000  (0.9%)              matriz[i][j] = (rand() % 100) + 1;  // Valores entre 1 y 100
+          .                  }
+          .              }
+         12  (0.0%)  }
+          .          
+          2  (0.0%)  static double wall_time_seconds(void) {
+          .              struct timespec ts;
+         16  (0.0%)      if (clock_gettime(CLOCK_MONOTONIC, &ts) != 0) {
+          .                  return 0.0;
+          .              }
+         12  (0.0%)      return (double)ts.tv_sec + (double)ts.tv_nsec / 1e9;
+         10  (0.0%)  }
+          .          
+          .          // Función para multiplicar dos matrices cuadradas con OpenMP
+         13  (0.0%)  int** multiplicar_matrices_omp(int** A, int** B, int n) {
+          .              int** C = crear_matriz(n);
+          .          
+        610  (0.0%)      #pragma omp parallel for collapse(2) schedule(static)
+          .              for (int i = 0; i < n; i++) {
+         88  (0.0%)          for (int j = 0; j < n; j++) {
+     90,000  (0.0%)              int suma = 0;
+ 81,000,000 (34.1%)              for (int k = 0; k < n; k++) {
+108,540,000 (45.8%)                  suma += A[i][k] * B[k][j];
+          .                      }
+    810,848  (0.3%)              C[i][j] = suma;
+          .                  }
+          .              }
+          .          
+          .              return C;
+         12  (0.0%)  }
+          .          
+          8  (0.0%)  int main(int argc, char* argv[]) {
+          2  (0.0%)      if (argc != 2) {
+          .                  printf("Uso: %s <tamaño>\n", argv[0]);
+          .                  printf("Ejemplo: %s 100\n", argv[0]);
+          .                  return 1;
+          .              }
+          .          
+          .              int n = atoi(argv[1]);
+          .          
+          2  (0.0%)      if (n <= 0) {
+          .                  printf("Error: El tamaño debe ser un número positivo.\n");
+          .                  n = 2000;
+          .              }
+          .          
+          2  (0.0%)      printf("=== Multiplicación de Matrices Cuadradas con OpenMP ===\n");
+          5  (0.0%)      printf("Tamaño de las matrices: %dx%d\n", n, n);
+          5  (0.0%)      printf("Hilos OpenMP disponibles: %d\n\n", omp_get_max_threads());
+          .          
+          4  (0.0%)      srand(time(NULL));
+          .          
+          .              // Crear matrices
+          3  (0.0%)      int** A = crear_matriz(n);
+          3  (0.0%)      int** B = crear_matriz(n);
+          .          
+          .              // Llenar matrices con valores aleatorios
+          3  (0.0%)      llenar_matriz(A, n);
+          3  (0.0%)      llenar_matriz(B, n);
+          .          
+          .              // Multiplicar matrices
+          2  (0.0%)      printf("\nMultiplicando matrices C = A × B...\n");
+          2  (0.0%)      double inicio = wall_time_seconds();
+          5  (0.0%)      int** C = multiplicar_matrices_omp(A, B, n);
+          1  (0.0%)      double fin = wall_time_seconds();
+          1  (0.0%)      double tiempo = fin - inicio;
+          .          
+          3  (0.0%)      printf("Tiempo de multiplicación: %.4f segundos\n\n", tiempo);
+          .          
+          2  (0.0%)      if (atoi(argv[1]) <= 10) {
+          .                  printf("Matriz A:\n");
+          .                  for (int i = 0; i < n; i++) {
+          .                      for (int j = 0; j < n; j++) {
+          .                          printf("%4d ", A[i][j]);
+          .                      }
+          .                      printf("\n");
+          .                  }
+          .          
+-- line 103 ----------------------------------------
+-- line 114 ----------------------------------------
+          .                      for (int j = 0; j < n; j++) {
+          .                          printf("%4d ", C[i][j]);
+          .                      }
+          .                      printf("\n");
+          .                  }
+          .              }
+          .          
+          .              // Liberar memoria
+          3  (0.0%)      liberar_matriz(A, n);
+          3  (0.0%)      liberar_matriz(B, n);
+          3  (0.0%)      liberar_matriz(C, n);
+          .          
+          2  (0.0%)      printf("¡Programa completado exitosamente!\n");
+          .          
+          2  (0.0%)      return 0;
+          8  (0.0%)  
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /usr/src/debug/gcc/gcc/libgomp/config/linux/wait.h
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /usr/src/debug/gcc/gcc/libgomp/config/linux/wait.h
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /usr/src/debug/gcc/gcc/libgomp/config/linux/x86/futex.h
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /usr/src/debug/gcc/gcc/libgomp/config/linux/x86/futex.h
+
+--------------------------------------------------------------------------------
+-- Annotation summary
+--------------------------------------------------------------------------------
+Ir_________________ 
+
+193,155,324 (81.4%)    annotated: files known & above threshold & readable, line numbers known
+          0            annotated: files known & above threshold & readable, line numbers unknown
+          0          unannotated: files known & above threshold & two or more non-identical
+ 33,725,690 (14.2%)  unannotated: files known & above threshold & unreadable 
+      4,353  (0.0%)  unannotated: files known & below threshold
+ 10,304,706  (4.3%)  unannotated: files unknown
+

@@ -53,7 +53,9 @@ def plot_execution_times(time_data):
         '8procesos': '#7f7f7f',
         'standar': '#000000',
         'cache': '#17becf',
-        'ofast': '#bcbd22'
+        'ofast': '#bcbd22',
+        'hilos82': '#1f77b4',
+        'openmp': '#ff7f0e',
     }
     
     linestyles = {
@@ -67,7 +69,9 @@ def plot_execution_times(time_data):
         '8procesos': '-',
         'standar': '-',
         'cache': '-',
-        'ofast': '-'
+        'ofast': '-',
+        'hilos82': '--',
+        'openmp': '--',
     }
     
     markers = {
@@ -81,7 +85,9 @@ def plot_execution_times(time_data):
         '8procesos': 'D',
         'standar': 'x',
         'cache': '+',
-        'ofast': '*'
+        'ofast': '*',
+        'hilos82': 'P',
+        'openmp': 'X'
     }
     
     # Crear figura

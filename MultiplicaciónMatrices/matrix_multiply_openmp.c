@@ -41,7 +41,7 @@ static double wall_time_seconds(void) {
 int** multiplicar_matrices_omp(int** A, int** B, int n) {
     int** C = crear_matriz(n);
 
-    #pragma omp parallel for collapse(3) schedule(static)
+    #pragma omp parallel for collapse(2) schedule(static)
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             int suma = 0;

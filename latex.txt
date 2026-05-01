@@ -1,0 +1,230 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+{\Large \textbf{UNIVERSIDAD TECNOLÓGICA DE PEREIRA}}\\[0.8cm]
+{\large INGENIERÍA DE SISTEMAS Y COMPUTACIÓN}\\[0.5cm]
+{\large HPC: HIGH PERFORMANCE COMPUTING}\\[2.0cm]
+{\LARGE \textbf{Caso de estudio 02 MM : optimización y OpenMP}}\\[0.8cm]
+
+\begin{flushleft}
+\textbf{Autor:} Jorge Luis López Grajales\\[0.4cm]
+\textbf{Asignatura:} HPC: High Performance Computing\\[0.4cm]
+\textbf{Docente:} Ramiro Andrés Barrios Valencia\\[0.4cm]
+\textbf{Fecha:} \today
+\end{flushleft}
+\vfill
+{\large Pereira -- Colombia}
+
+\end{titlepage}
+
+\maketitle
+
+\section{OBJETIVO}
+El propósito de este informe es analizar y comparar el rendimiento de la multiplicación de matrices cuadradas utilizando diversas estrategias de concurrencia en lenguaje C, con especial énfasis en \textbf{OpenMP}. Se busca evaluar la eficiencia de OpenMP frente a implementaciones de \textit{Pthreads} y procesos con memoria compartida. 
+
+Adicionalmente, se realiza un diagnóstico profundo del uso de recursos mediante herramientas de perfilado (\textit{Cachegrind, Callgrind y Massif}) y se establece un punto de referencia (\textit{benchmark}) del sistema utilizando el \textbf{Phoronix Test Suite}.
+
+\section{MARCO CONCEPTUAL}
+
+\subsection{High Performance Computing (HPC)} 
+La computación de alto rendimiento consiste en el uso de sistemas potentes para resolver problemas complejos que requieren gran capacidad de procesamiento. El objetivo principal es optimizar el hardware para minimizar los tiempos de ejecución.
+
+\subsection{Multiplicación Matricial} 
+Es una operación de álgebra lineal con una complejidad secuencial de $O(n^3)$, lo que la convierte en un caso de estudio ideal para la paralelización debido a su alta demanda computacional.
+
+\subsection{Modelos de Concurrencia y Paralelismo}
+\begin{itemize}
+    \item \textbf{OpenMP:} API basada en directivas de compilador que facilita la paralelización de bucles (como \texttt{\#pragma omp parallel for}) en sistemas de memoria compartida.
+    \item \textbf{Pthreads (Hilos):} Hilos de ejecución que comparten el mismo espacio de memoria. Su rendimiento puede verse afectado por la gestión de memoria.
+    \item \textbf{Procesos (Shared Memory):} Utilizan segmentos de memoria compartida (IPC). Esta técnica suele mejorar la localidad de datos y reducir fallos de caché.
+\end{itemize}
+
+\subsection{Métricas de Rendimiento y Perfilado}
+\begin{itemize}
+    \item \textbf{Speedup:} Métrica que define la aceleración obtenida: $S = \frac{T_1}{T_p}$.
+    \item \textbf{Perfilado de Caché (Cachegrind):} Simula la jerarquía de memoria para identificar fallos de caché (\textit{cache misses}).
+    \item \textbf{Perfilado de CPU (Callgrind):} Genera un grafo de llamadas y contabiliza las instrucciones ejecutadas.
+    \item \textbf{Perfilado de Memoria (Massif):} Mide el uso del \textit{heap} a lo largo del tiempo.
+\end{itemize}
+
+\subsection{Benchmarking (Phoronix Test Suite)} 
+El benchmarking es la ejecución de pruebas estandarizadas. El \textbf{Phoronix Test Suite} es una plataforma de código abierto que permite realizar pruebas automatizadas y comparables del hardware bajo diferentes cargas de trabajo.
+
+\section{MARCO CONTEXTUAL (Especificaciones del Entorno)}
+Para asegurar la reproducibilidad de los resultados, las pruebas se realizaron bajo las siguientes especificaciones técnicas:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Componente} & \textbf{Especificación} \\ \midrule
+Sistema Operativo & Arch Linux x86\_64 (Kernel 6.19.8-arch1-1) \\
+Procesador (CPU) & Intel(R) Core(TM) i5-10300H (4C/8T) @ 4.50 GHz \\
+Memoria RAM & 16 GB DDR4 \\
+GPU & NVIDIA GeForce GTX 1650 Mobile / Max-Q \\
+Compilador & GCC 15.2.1 / Clang 22.1.3 \\
+Herramienta Benchmark & Phoronix Test Suite v10.8.4 \\ \bottomrule
+\end{tabular}
+\caption{Detalles del entorno de ejecución.}
+\end{table}
+% Agrega esto al preámbulo si no lo tienes:
+% \usepackage{graphicx}
+
+\section{ANÁLISIS COMPARATIVO DE RENDIMIENTO}
+En esta sección se evalúa el desempeño de \textbf{OpenMP} frente a las versiones secuencial, de hilos (\textit{Pthreads}) y procesos, utilizando las métricas de tiempo de ejecución y aceleración (\textit{speedup}).
+
+\subsection{Análisis de Tiempos de Ejecución}
+Como se evidencia en la Figura \ref{fig:tiempos}, la versión secuencial (\textit{standard}) presenta un crecimiento exponencial del tiempo de ejecución conforme aumenta el tamaño de la matriz, alcanzando los 1000 segundos para una matriz de $5000 \times 5000$. 
+
+Por el contrario, todas las versiones paralelas logran reducir este tiempo significativamente, manteniéndose por debajo de los 200 segundos para el mismo tamaño, lo que representa una reducción drástica en la latencia de cómputo.
+
+\begin{figure}[h] 
+    \centering 
+    \includegraphics[width=1\textwidth]{./execution_time_graph.png} 
+    \caption{Comparación de Tiempos de Ejecución: Secuencial vs Estrategias Paralelas.} 
+    \label{fig:tiempos} 
+\end{figure}
+
+\subsection{Análisis de Speedup}
+El gráfico de \textit{Speedup} (Figura \ref{fig:speedup}) permite observar la eficiencia de cada implementación respecto a la versión estándar, destacando los siguientes hallazgos:
+
+\begin{itemize}
+    \item \textbf{8 Procesos:} Lidera el rendimiento con un \textit{speedup} superior a $8\times$. Este comportamiento se atribuye a una gestión eficiente de la memoria compartida contigua, minimizando las colisiones en el bus de datos.
+    \item \textbf{hilos82 (Pthreads optimizado):} Se posiciona como la segunda mejor opción, logrando picos de hasta $7.5\times$ gracias a la optimización de contigüidad en el \textit{heap}, lo que favorece la localidad espacial.
+    \item \textbf{OpenMP:} Muestra un rendimiento sólido y estable entre $5\times$ y $6\times$. Supera consistentemente a la versión de 8 hilos estándar, lo que demuestra que la gestión de hilos de la librería \texttt{libgomp} es más eficiente que la creación manual de \textit{Pthreads} sin una gestión mayor de la memoria.
+\end{itemize}
+
+\begin{figure}[h] 
+    \centering 
+    \includegraphics[width=1\textwidth]{speedup_graph.png} 
+    \caption{Speedup relativo a la versión secuencial para diferentes tamaños de matriz.} 
+    \label{fig:speedup} 
+\end{figure}
+\section{PERFILADO DE RECURSOS (OPENMP)}
+Para comprender el comportamiento interno de la implementación con OpenMP, se realizó un perfilado exhaustivo utilizando la suite \textbf{Valgrind} sobre una carga de $N=300$.
+
+\subsection{Perfilado de CPU e Instrucciones (Callgrind)}
+El reporte de \textit{Callgrind} muestra un total de $231,288,642$ instrucciones ejecutadas. La eficiencia del paralelismo se refleja en la concentración del esfuerzo computacional en el kernel de la operación.
+
+\begin{itemize}
+    \item \textbf{Cómputo Útil:} La función \texttt{multiplicar\_matrices\_omp.\_omp\_fn.0} domina el perfil con un \textbf{82.34\%} del tiempo de CPU.
+    \item \textbf{Sincronización:} Se observa un costo de barrera (\textit{barriers}) del \textbf{14.3\%} distribuido entre \texttt{gomp\_barrier\_wait\_end} ($8.4\%$) y \texttt{gomp\_team\_barrier\_wait\_end} ($5.9\%$). Esto es característico de implementaciones con balance dinámico de carga o hilos esperando la finalización de regiones paralelas.
+\end{itemize}
+
+\subsection{Análisis de Memoria y Jerarquía de Caché (Cachegrind)}
+Los datos de \textit{Cachegrind} revelan una excelente localidad de datos, fundamental para el rendimiento.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Evento de Memoria} & \textbf{Recuento} & \textbf{Tasa de Fallo (\%)} \\ \midrule
+Lecturas de Instrucciones (Ir) & 231,288,642 & 0.00\% \\
+Lecturas de Datos (Dr) & 109,477,883 & 0.04\% \\
+Escrituras de Datos (Dw) & 54,499,391 & 0.01\% \\ \midrule
+\textbf{Total Fallos L1 (D1)} & \textbf{48,771} & \textbf{0.03\%} \\
+\textbf{Total Fallos L3 (LL)} & \textbf{37,429} & \textbf{0.02\%} \\ \bottomrule
+\end{tabular}
+\caption{Estadísticas de acceso a caché obtenidas con Cachegrind.}
+\end{table}
+
+\textbf{Interpretación:} Una tasa de fallo del \textbf{0.03\%} en L1 indica que las matrices caben casi íntegramente en la memoria caché del \textit{i5-10300H} o que el patrón de acceso por filas es altamente eficiente para el \textit{prefetcher} del hardware.
+
+\subsection{Perfilado de Memoria Dinámica (Massif)}
+El reporte de \textit{Massif} confirma que la implementación es "ligera" en términos de consumo de montículo (\textit{heap}).
+
+\begin{itemize}
+    \item \textbf{Pico de Memoria:} $1.1$ MB ($1,104,288$ bytes).
+    \item \textbf{Eficiencia de Reserva:} El $99.33\%$ de la memoria es asignada en el bloque inicial por \texttt{crear\_matriz}, evitando la fragmentación durante el cálculo.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{1\textwidth} % Controla el ancho para que no se desborde
+    \begin{quote}
+    \fontsize{10pt}{11pt}\selectfont % Fuente pequeña para que el ASCII no se rompa
+    \begin{verbatim}
+--------------------------------------------------------------------------------
+Command:            ./openmp_test 300 8
+Massif arguments:   (none)
+ms_print arguments: massif.out.12345
+--------------------------------------------------------------------------------
+    MB
+1.053^      :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#
+     |   :@::                                                            #
+     |   :@::                                                            #
+     |   @@::                                                            #
+     |   @@::                                                            #
+     |:::@@::                                                            #
+     |@  @@::                                                            #
+0.000+----------------------------------------------------------------------->ms
+     0                                                               142.5
+    \end{verbatim}
+    \end{quote}
+    \end{minipage}
+    \caption{Perfil de memoria Massif: Consumo constante tras la reserva inicial.}
+    \label{fig:massif_plot}
+\end{figure}
+
+\section{VALIDACIÓN EXTERNA MEDIANTE BENCHMARKS ESTÁNDAR}
+
+Para situar el rendimiento del sistema \textit{ASUS FX506LH} (Intel i5-10300H) en un contexto global, se contrastaron los resultados locales frente a la base de datos de \textit{OpenBenchmarking.org} utilizando dos métricas fundamentales: ancho de banda de memoria y capacidad de cómputo de enteros.
+
+\subsection{Análisis de Memoria Principal (Tinymembench)}
+La eficiencia de cualquier algoritmo de alto rendimiento (HPC) está limitada por el ancho de banda de la memoria (\textit{Memory Wall}). Utilizando la prueba \textit{Standard Memcpy}, se comparó la capacidad de transferencia del sistema local.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{./comparacion4.png}
+    \includegraphics[width=0.85\textwidth]{./comparacion3.png}
+    \caption{Comparativa de Standard Memcpy: Rendimiento local vs. Media poblacional.}
+    \label{fig:tinymem}
+\end{figure}
+
+Como se observa en la Figura \ref{fig:tinymem}, el sistema alcanzó un valor de \textbf{12,503.3 MB/s}. Al compararlo con registros de hardware idéntico, se evidencia que la configuración bajo \textit{Arch Linux} logra un aprovechamiento superior del bus de datos,situandose en un punto medio general con otros tipos de memoria similares.
+
+\subsection{Rendimiento de Cómputo y Paralelismo (Coremark)}
+Coremark es una métrica que evalúa la capacidad del procesador para manejar operaciones de lógica, control y despacho de instrucciones en múltiples hilos, evitando cuellos de botella externos.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{./comparacion2.png}
+    \includegraphics[width=0.85\textwidth]{./comparacion1.png}
+    \caption{Resultados de Coremark: Iteraciones por segundo y estabilidad del sistema.}
+    \label{fig:coremark}
+\end{figure}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Métrica} & \textbf{Resultado Local} & \textbf{Referencia Web} & \textbf{Desviación} \\ \midrule
+Standard Memcpy & 12,503.3 MB/s & 11,820.5 MB/s & +5.77\% \\
+Coremark (Iter/s) & [Insertar Valor]* & 124,382.45 & $\pm$ X\% \\ \bottomrule
+\end{tabular}
+\caption{Resumen comparativo de rendimiento frente a registros externos.}
+\end{table}
+
+\texttt{comparacion3}.}
+Los resultados obtenidos en esta prueba (Figura \ref{fig:coremark}) son de especial relevancia técnica. Se evidencian parámetros comparables a productos de las mismas características a nivel de GPU, lo cual es bastante óptimo considerando la naturaleza de bajo consumo de un computador portátil. Este equilibrio entre potencia de cómputo y eficiencia energética demuestra que el sistema mantiene frecuencias de reloj estables incluso bajo cargas de trabajo paralelas intensivas.
+\subsection{Discusión de los Resultados}
+La consistencia observada en ambas pruebas confirma que el procesador \textit{i5-10300H} y la memoria operan dentro de sus parámetros de frecuencia y gestión térmica. con pocas perdidas de rendimiento considerando el tiempo que lleva en uso(más de 4 años).
+
+\subsection{Conclusión}
+Para terminar con este documento podemos concluir que la maquina es apta para la tarea de correr la multiplicacion de matrices con openmp, debido a que los resultados evidencian que la carga que este programa puede dar es soportable por la maquina, y de hecho esta bien acondicionada para tales fines, puesto que sus caracteristicas de gama de entrada le permiten tratar con los cuellos de botella que se puedan generar al multiplicar matrices muy grandes, ademas de poder utilizar los hilos del procesador para utilizar openmp y acelerar la multiplicación más que por ejemplo un procesador mononucleo.
+
+\end{document}

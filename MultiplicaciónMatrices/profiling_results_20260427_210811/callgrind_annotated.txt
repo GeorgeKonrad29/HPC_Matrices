@@ -1,0 +1,203 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/georgekonrad/Desktop/HPC_Matrices/MultiplicaciónMatrices/profiling_results_20260427_210811/callgrind.out' (creator: callgrind-3.25.1)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 42202176
+Trigger: Program termination
+Profiled target:  /home/georgekonrad/Desktop/HPC_Matrices/MultiplicaciónMatrices/matrix_multiply_openmp_profile 300 (PID 16009, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                   
+--------------------------------------------------------------------------------
+231,288,642 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                    file:function
+--------------------------------------------------------------------------------
+190,441,560 (82.34%)  matrix_multiply_openmp.c:multiplicar_matrices_omp._omp_fn.0 [/home/georgekonrad/Desktop/HPC_Matrices/MultiplicaciónMatrices/matrix_multiply_openmp_profile]
+ 12,618,173 ( 5.46%)  /usr/src/debug/gcc/gcc/libgomp/config/linux/wait.h:gomp_barrier_wait_end
+ 11,232,208 ( 4.86%)  /usr/src/debug/gcc/gcc/libgomp/config/linux/wait.h:gomp_team_barrier_wait_end
+  5,042,864 ( 2.18%)  ???:random_r [/usr/lib/libc.so.6]
+  3,420,000 ( 1.48%)  ???:random [/usr/lib/libc.so.6]
+  2,883,640 ( 1.25%)  matrix_multiply_openmp.c:llenar_matriz [/home/georgekonrad/Desktop/HPC_Matrices/MultiplicaciónMatrices/matrix_multiply_openmp_profile]
+  2,103,067 ( 0.91%)  /usr/src/debug/gcc/gcc/libgomp/config/linux/x86/futex.h:gomp_barrier_wait_end
+  1,872,039 ( 0.81%)  /usr/src/debug/gcc/gcc/libgomp/config/linux/x86/futex.h:gomp_team_barrier_wait_end
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: matrix_multiply_openmp.c
+--------------------------------------------------------------------------------
+Ir                   
+
+          .           #include <stdio.h>
+          .           #include <stdlib.h>
+          .           #include <time.h>
+          .           #include <omp.h>
+          .           
+          .           // Función para crear una matriz
+         12 ( 0.00%)  int** crear_matriz(int n) {
+         18 ( 0.00%)      int** matriz = (int**)malloc(n * sizeof(int*));
+        145 ( 0.00%)  => ???:malloc (1x)
+        907 ( 0.00%)  => ???:0x00000000000143f0 (1x)
+      2,708 ( 0.00%)      for (int i = 0; i < n; i++) {
+      3,610 ( 0.00%)          matriz[i] = (int*)malloc(n * sizeof(int));
+     87,770 ( 0.04%)  => ???:malloc (600x)
+          .               }
+          .               return matriz;
+         14 ( 0.00%)  }
+          .           
+          .           // Función para liberar la memoria de una matriz
+         12 ( 0.00%)  void liberar_matriz(int** matriz, int n) {
+      2,718 ( 0.00%)      for (int i = 0; i < n; i++) {
+      2,704 ( 0.00%)          free(matriz[i]);
+    170,059 ( 0.07%)  => ???:free (899x)
+        824 ( 0.00%)  => ???:0x00000000000143f0 (1x)
+          .               }
+          9 ( 0.00%)      free(matriz);
+        631 ( 0.00%)  => ???:free (3x)
+          9 ( 0.00%)  }
+          .           
+          .           // Función para llenar la matriz con valores aleatorios
+      1,820 ( 0.00%)  void llenar_matriz(int** matriz, int n) {
+      1,804 ( 0.00%)      for (int i = 0; i < n; i++) {
+    540,000 ( 0.23%)          for (int j = 0; j < n; j++) {
+  2,340,004 ( 1.01%)              matriz[i][j] = (rand() % 100) + 1;  // Valores entre 1 y 100
+  9,534,141 ( 4.12%)  => ???:rand (179,999x)
+        773 ( 0.00%)  => ???:0x00000000000143f0 (1x)
+          .                   }
+          .               }
+         12 ( 0.00%)  }
+          .           
+          2 ( 0.00%)  static double wall_time_seconds(void) {
+          .               struct timespec ts;
+         22 ( 0.00%)      if (clock_gettime(CLOCK_MONOTONIC, &ts) != 0) {
+        788 ( 0.00%)  => ???:0x00000000000143f0 (1x)
+         11 ( 0.00%)  => ???:clock_gettime (1x)
+          .                   return 0.0;
+          .               }
+         12 ( 0.00%)      return (double)ts.tv_sec + (double)ts.tv_nsec / 1e9;
+         10 ( 0.00%)  }
+          .           
+          .           // Función para multiplicar dos matrices cuadradas con OpenMP
+         13 ( 0.00%)  int** multiplicar_matrices_omp(int** A, int** B, int n) {
+          .               int** C = crear_matriz(n);
+          .           
+        615 ( 0.00%)      #pragma omp parallel for collapse(2) schedule(static)
+ 28,015,630 (12.11%)  => ???:0x00000000000143f0 (1x)
+          .               for (int i = 0; i < n; i++) {
+        112 ( 0.00%)          for (int j = 0; j < n; j++) {
+      1,608 ( 0.00%)  => ???:0x00000000000143f0 (2x)
+         56 ( 0.00%)  => /usr/src/debug/gcc/gcc/libgomp/parallel.c:omp_get_num_threads (7x)
+         28 ( 0.00%)  => /usr/src/debug/gcc/gcc/libgomp/parallel.c:omp_get_thread_num (7x)
+     90,000 ( 0.04%)              int suma = 0;
+ 81,000,000 (35.02%)              for (int k = 0; k < n; k++) {
+108,540,000 (46.93%)                  suma += A[i][k] * B[k][j];
+          .                       }
+    810,848 ( 0.35%)              C[i][j] = suma;
+          .                   }
+          .               }
+          .           
+          .               return C;
+         12 ( 0.00%)  }
+          .           
+          8 ( 0.00%)  int main(int argc, char* argv[]) {
+          2 ( 0.00%)      if (argc != 2) {
+          .                   printf("Uso: %s <tamaño>\n", argv[0]);
+          .                   printf("Ejemplo: %s 100\n", argv[0]);
+          .                   return 1;
+          .               }
+          .           
+          .               int n = atoi(argv[1]);
+          .           
+          2 ( 0.00%)      if (n <= 0) {
+          .                   printf("Error: El tamaño debe ser un número positivo.\n");
+          .                   n = 2000;
+          .               }
+          .           
+          7 ( 0.00%)      printf("=== Multiplicación de Matrices Cuadradas con OpenMP ===\n");
+      1,213 ( 0.00%)  => ???:0x00000000000143f0 (1x)
+         10 ( 0.00%)      printf("Tamaño de las matrices: %dx%d\n", n, n);
+      1,635 ( 0.00%)  => ???:0x00000000000143f0 (1x)
+         11 ( 0.00%)      printf("Hilos OpenMP disponibles: %d\n\n", omp_get_max_threads());
+        800 ( 0.00%)  => ???:0x00000000000143f0 (1x)
+        592 ( 0.00%)  => ???:printf (1x)
+          .           
+         14 ( 0.00%)      srand(time(NULL));
+     12,051 ( 0.01%)  => ???:0x00000000000143f0 (2x)
+          .           
+          .               // Crear matrices
+          3 ( 0.00%)      int** A = crear_matriz(n);
+     46,843 ( 0.02%)  => matrix_multiply_openmp.c:crear_matriz (1x)
+          3 ( 0.00%)      int** B = crear_matriz(n);
+     46,231 ( 0.02%)  => matrix_multiply_openmp.c:crear_matriz (1x)
+          .           
+          .               // Llenar matrices con valores aleatorios
+          3 ( 0.00%)      llenar_matriz(A, n);
+  6,209,639 ( 2.68%)  => matrix_multiply_openmp.c:llenar_matriz (1x)
+          3 ( 0.00%)      llenar_matriz(B, n);
+  6,208,915 ( 2.68%)  => matrix_multiply_openmp.c:llenar_matriz (1x)
+          .           
+          .               // Multiplicar matrices
+          3 ( 0.00%)      printf("\nMultiplicando matrices C = A × B...\n");
+        155 ( 0.00%)  => ???:puts (1x)
+          2 ( 0.00%)      double inicio = wall_time_seconds();
+        813 ( 0.00%)  => matrix_multiply_openmp.c:wall_time_seconds (1x)
+          5 ( 0.00%)      int** C = multiplicar_matrices_omp(A, B, n);
+ 28,061,887 (12.13%)  => matrix_multiply_openmp.c:multiplicar_matrices_omp (1x)
+          1 ( 0.00%)      double fin = wall_time_seconds();
+         32 ( 0.00%)  => matrix_multiply_openmp.c:wall_time_seconds (1x)
+          1 ( 0.00%)      double tiempo = fin - inicio;
+          .           
+          4 ( 0.00%)      printf("Tiempo de multiplicación: %.4f segundos\n\n", tiempo);
+      1,405 ( 0.00%)  => ???:printf (1x)
+          .           
+          2 ( 0.00%)      if (atoi(argv[1]) <= 10) {
+          .                   printf("Matriz A:\n");
+          .                   for (int i = 0; i < n; i++) {
+          .                       for (int j = 0; j < n; j++) {
+          .                           printf("%4d ", A[i][j]);
+          .                       }
+          .                       printf("\n");
+          .                   }
+          .           
+-- line 103 ----------------------------------------
+-- line 114 ----------------------------------------
+          .                       for (int j = 0; j < n; j++) {
+          .                           printf("%4d ", C[i][j]);
+          .                       }
+          .                       printf("\n");
+          .                   }
+          .               }
+          .           
+          .               // Liberar memoria
+          3 ( 0.00%)      liberar_matriz(A, n);
+     59,420 ( 0.03%)  => matrix_multiply_openmp.c:liberar_matriz (1x)
+          3 ( 0.00%)      liberar_matriz(B, n);
+     58,773 ( 0.03%)  => matrix_multiply_openmp.c:liberar_matriz (1x)
+          3 ( 0.00%)      liberar_matriz(C, n);
+     58,773 ( 0.03%)  => matrix_multiply_openmp.c:liberar_matriz (1x)
+          .           
+          3 ( 0.00%)      printf("¡Programa completado exitosamente!\n");
+        161 ( 0.00%)  => ???:puts (1x)
+          .           
+          2 ( 0.00%)      return 0;
+          8 ( 0.00%)  }
+--------------------------------------------------------------------------------
+The following files chosen for auto-annotation could not be found:
+--------------------------------------------------------------------------------
+  /usr/src/debug/gcc/gcc/libgomp/config/linux/wait.h
+  /usr/src/debug/gcc/gcc/libgomp/config/linux/x86/futex.h
+
+--------------------------------------------------------------------------------
+Ir                   
+--------------------------------------------------------------------------------
+193,337,206 (83.59%)  events annotated
+

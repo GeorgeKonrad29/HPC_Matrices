@@ -1,0 +1,15 @@
+==16046== Massif, a heap profiler
+==16046== Copyright (C) 2003-2024, and GNU GPL'd, by Nicholas Nethercote et al.
+==16046== Using Valgrind-3.25.1 and LibVEX; rerun with -h for copyright info
+==16046== Command: /home/georgekonrad/Desktop/HPC_Matrices/Multiplicaci__nMatrices/matrix_multiply_openmp_profile 300
+==16046== 
+=== Multiplicación de Matrices Cuadradas con OpenMP ===
+Tamaño de las matrices: 300x300
+Hilos OpenMP disponibles: 8
+
+
+Multiplicando matrices C = A × B...
+Tiempo de multiplicación: 0.3256 segundos
+
+¡Programa completado exitosamente!
+==16046== 
