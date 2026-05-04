@@ -1,0 +1,18 @@
+Serial traffic simulation on a periodic road
+Cells: 10
+Steps: 5
+Target density: 0.3000
+Seed: 1
+Initial cars: 3
+
+Step   Moved   AvgVelocity
+----   -----   -----------
+   1       2      0.666667
+   2       3      1.000000
+   3       3      1.000000
+   4       3      1.000000
+   5       3      1.000000
+
+Final road state:
+0000101010
+Wall time: 0.000046 seconds
