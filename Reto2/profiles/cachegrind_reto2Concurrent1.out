@@ -1,0 +1,650 @@
+cmd: /home/georgekonrad/Desktop/HPC_Matrices/Reto2/reto2Concurrent1 1000000 200 0.3 1
+events: Ir
+fl=/usr/src/debug/gcc/gcc-build/gcc/include/cpuid.h
+fn=initialize_env
+309 2
+347 2
+350 3
+fl=/usr/src/debug/gcc/gcc/libgomp/alloc.c
+fn=gomp_aligned_alloc
+64 1200
+66 600
+71 200
+99 400
+102 600
+fn=gomp_malloc
+37 12
+38 2
+39 4
+42 6
+fn=gomp_malloc_cleared
+46 6
+47 3
+48 2
+51 3
+fl=/usr/src/debug/gcc/gcc/libgomp/config/linux/bar.c
+fn=gomp_team_barrier_wait_end
+82 2000
+85 400
+89 400
+91 400
+92 200
+93 600
+100 400
+101 200
+102 400
+122 1400
+fn=gomp_team_barrier_wait_final
+132 200
+135 400
+136 200
+fl=/usr/src/debug/gcc/gcc/libgomp/config/linux/bar.h
+fn=gomp_new_team
+58 400
+59 600
+fn=gomp_team_barrier_wait_final
+115 200
+116 200
+118 400
+119 200
+fl=/usr/src/debug/gcc/gcc/libgomp/config/linux/mutex.h
+fn=goacc_host_init
+43 1
+fn=goacc_profiling_initialize
+43 1
+fn=goacc_register
+55 4
+63 2
+64 2
+fn=goacc_runtime_initialize
+43 2
+fn=gomp_init_work_share
+43 200
+fn=gomp_new_team
+43 200
+fl=/usr/src/debug/gcc/gcc/libgomp/config/linux/proc.c
+fn=gomp_init_num_threads
+53 4
+82 5
+85 2
+86 4
+91 2
+94 8
+96 2
+100 2
+101 2
+103 2
+106 116
+107 745
+109 5
+130 1
+145 3
+fl=/usr/src/debug/gcc/gcc/libgomp/config/linux/ptrlock.h
+fn=gomp_init_work_share
+44 200
+fl=/usr/src/debug/gcc/gcc/libgomp/config/linux/sem.h
+fn=gomp_new_team
+46 200
+fl=/usr/src/debug/gcc/gcc/libgomp/config/linux/x86/futex.h
+fn=gomp_team_barrier_wait_end
+52 800
+111 400
+fl=/usr/src/debug/gcc/gcc/libgomp/config/linux/x86/spincount.h
+fn=initialize_env
+39 2
+fl=/usr/src/debug/gcc/gcc/libgomp/config/posix/pool.h
+fn=gomp_new_team
+39 200
+40 400
+42 2
+43 1
+44 1
+46 1
+47 1
+48 2
+49 6
+fl=/usr/src/debug/gcc/gcc/libgomp/env.c
+fn=add_initial_icv_to_list
+2043 8
+2126 2
+2128 3
+2132 1
+2134 2
+2136 2
+2138 1
+2141 1
+2149 10
+2150 2
+2151 7
+2160 7
+2161 2
+2163 4
+2165 2
+2166 2
+2178 2
+2180 2
+2181 6
+fn=cleanup_env
+2193 1
+2194 4
+2197 1
+fn=get_icv_member_addr.part.0
+2046 4
+2048 14
+2071 4
+2072 2
+2073 4
+2074 2
+fn=initialize_env
+334 5
+342 7
+756 4
+760 2
+995 3
+996 2
+1145 3
+1146 2
+1423 2
+1425 2
+1426 1
+1436 3
+1440 2
+1665 45
+1671 12
+1982 3
+1983 2
+2043 6
+2116 4
+2117 12
+2118 1
+2126 3
+2128 3
+2132 1
+2134 2
+2136 1
+2138 1
+2141 1
+2188 338
+2203 12
+2206 1
+2219 1
+2220 2
+2225 4
+2229 4
+2230 247
+2232 122
+2236 3
+2237 21
+2239 12
+2241 5
+2242 3
+2244 1
+2246 7
+2247 1
+2268 4
+2287 1
+2289 10
+2291 10
+2292 9
+2305 29
+2308 18
+2311 16
+2319 10
+2338 10
+2339 18
+2341 6
+2363 3
+2364 2
+2369 2
+2373 1
+2374 2
+2377 8
+2380 4
+2384 2
+2385 2
+2386 4
+2411 2
+2415 3
+2416 2
+2420 2
+2422 2
+2433 2
+2435 1
+2437 1
+2446 2
+2447 3
+2451 2
+2453 2
+2455 2
+2456 2
+2461 2
+2463 2
+2494 4
+2496 2
+2501 1
+2503 1
+2504 11
+fn=parse_boolean
+1064 1
+1067 2
+1092 2
+fn=parse_int_1
+318 22
+320 10
+321 4
+329 18
+fn=parse_unsigned_long_1
+254 20
+258 4
+259 2
+282 20
+fn=parse_unsigned_long_list
+351 12
+352 2
+353 2
+354 2
+358 5
+361 7
+363 2
+366 3
+367 7
+368 5
+371 6
+373 2
+424 2
+430 2
+431 2
+434 2
+441 11
+fl=/usr/src/debug/gcc/gcc/libgomp/libgomp.h
+fn=GOMP_parallel
+989 400
+991 800
+fn=gomp_end_task
+1117 600
+fn=gomp_resolve_num_threads
+989 400
+991 800
+fl=/usr/src/debug/gcc/gcc/libgomp/oacc-host.c
+fn=goacc_host_init
+328 1
+330 2
+fl=/usr/src/debug/gcc/gcc/libgomp/oacc-init.c
+fn=goacc_register
+74 5
+76 3
+81 5
+84 3
+85 1
+88 2
+fn=goacc_runtime_deinitialize
+904 1
+908 2
+fn=goacc_runtime_initialize
+884 3
+891 3
+893 1
+895 1
+899 1
+900 1
+fl=/usr/src/debug/gcc/gcc/libgomp/oacc-profiling.c
+fn=goacc_profiling_initialize
+100 8
+105 3
+109 2
+110 4
+174 7
+fl=/usr/src/debug/gcc/gcc/libgomp/parallel.c
+fn=GOMP_parallel
+141 400
+167 200
+174 2000
+175 800
+176 1800
+178 400
+180 1000
+fn=gomp_resolve_num_threads
+40 800
+49 400
+52 600
+56 600
+60 400
+64 400
+65 200
+73 600
+85 600
+127 600
+fn=omp_get_num_threads
+278 200
+279 400
+280 800
+281 200
+fn=omp_get_thread_num
+285 200
+286 400
+287 200
+fl=/usr/src/debug/gcc/gcc/libgomp/priority_queue.h
+fn=gomp_init_task
+161 800
+fn=gomp_new_team
+154 200
+161 400
+fl=/usr/src/debug/gcc/gcc/libgomp/task.c
+fn=gomp_end_task
+99 200
+101 400
+104 600
+fn=gomp_init_task
+68 200
+77 400
+83 200
+84 200
+85 200
+86 200
+87 1200
+88 200
+93 200
+fl=/usr/src/debug/gcc/gcc/libgomp/team.c
+fn=gomp_new_team
+154 600
+157 200
+158 400
+171 1800
+181 600
+182 400
+193 200
+196 200
+198 200
+200 400
+201 600
+202 200
+203 200
+204 400
+206 2400
+207 200
+210 600
+211 400
+214 200
+216 200
+217 200
+223 1400
+fn=gomp_team_end
+237 400
+949 1600
+951 400
+957 400
+958 600
+972 400
+974 200
+975 2000
+977 600
+991 600
+1004 400
+1005 400
+1015 1200
+fn=gomp_team_start
+322 3000
+339 1000
+340 400
+341 400
+342 1000
+343 400
+354 2000
+356 200
+357 200
+358 600
+359 400
+361 600
+362 200
+364 400
+367 600
+371 600
+372 600
+375 600
+376 400
+379 1000
+382 1000
+383 600
+384 400
+385 400
+387 600
+940 2200
+fn=initialize_team
+1023 3
+1031 5
+1033 2
+fn=team_destructor
+1037 1
+1040 2
+fl=/usr/src/debug/gcc/gcc/libgomp/work.c
+fn=gomp_fini_work_share
+144 200
+146 800
+149 200
+fn=gomp_init_work_share
+103 400
+105 400
+134 400
+136 400
+fl=???
+fn=(below main)
+0 84
+fn=???
+0 370190
+fn=_Exit
+0 5
+fn=_IO_do_write
+0 14
+fn=_IO_doallocbuf
+0 23
+fn=_IO_file_doallocate
+0 64
+fn=_IO_file_overflow
+0 83
+fn=_IO_file_setbuf
+0 18
+fn=_IO_file_stat
+0 3
+fn=_IO_file_sync
+0 21
+fn=_IO_file_write
+0 39
+fn=_IO_file_xsputn
+0 46
+fn=_IO_flush_all
+0 195
+fn=_IO_setb
+0 19
+fn=__call_tls_dtors
+0 13
+fn=__close_nocancel_nostatus
+0 4
+fn=__ctype_b_loc
+0 4
+fn=__ctype_init
+0 17
+fn=__cxa_atexit
+0 3
+fn=__cxa_finalize
+0 174
+fn=__default_morecore
+0 20
+fn=__errno_location
+0 16
+fn=__isoc23_strtoul
+0 36
+fn=__libc_alloca_cutoff
+0 22
+fn=__libc_early_init
+0 53
+fn=__memcpy_chk
+0 48
+fn=__memmove_chk
+0 24
+fn=__mempcpy_chk
+0 24
+fn=__memset_chk
+0 50
+fn=__open_nocancel
+0 27
+fn=__overflow
+0 12
+fn=__read_nocancel
+0 6
+fn=__sched_cpucount
+0 48
+fn=__sigsetjmp
+0 22
+fn=__tunable_get_val
+0 588
+fn=_dl_allocate_tls_init
+0 162
+fn=_dl_audit_preinit
+0 5
+fn=_dl_catch_exception
+0 220
+fn=_dl_debug_state
+0 4
+fn=_setjmp
+0 3
+fn=advanceRoad._omp_fn.0
+0 275014200
+fn=bcmp
+0 50
+fn=brk
+0 18
+fn=calloc
+0 59
+fn=clock_gettime
+0 33
+fn=exit
+0 7
+fn=free
+0 4060
+fn=fstat
+0 6
+fn=get_nprocs_conf
+0 9
+fn=getenv
+0 5664
+fn=getpagesize
+0 6
+fn=getrlimit
+0 10
+fn=index
+0 42
+fn=main
+0 14756834
+fn=malloc
+0 62
+fn=memalign
+0 400
+fn=memchr
+0 21
+fn=memcpy
+0 48
+fn=memmove
+0 48
+fn=mempcpy
+0 24
+fn=memrchr
+0 25
+fn=memset
+0 50
+fn=mmap
+0 78
+fn=munmap
+0 18
+fn=parseSizeT
+0 70
+fn=printf
+0 40
+fn=pthread_attr_init
+0 18
+fn=pthread_getaffinity_np
+0 21
+fn=pthread_key_create
+0 47
+fn=pthread_key_delete
+0 32
+fn=pthread_mutex_lock
+0 38
+fn=pthread_mutex_unlock
+0 3
+fn=pthread_self
+0 3
+fn=pthread_setspecific
+0 26
+fn=putchar
+0 45
+fn=puts
+0 71
+fn=rindex
+0 25
+fn=sbrk
+0 50
+fn=secure_getenv
+0 12
+fn=stpcpy
+0 19
+fn=stpncpy
+0 21
+fn=strcasecmp
+0 44
+fn=strcasecmp_l
+0 22
+fn=strcat
+0 19
+fn=strchrnul
+0 25
+fn=strcmp
+0 60
+fn=strcpy
+0 19
+fn=strcspn
+0 7
+fn=strlen
+0 50
+fn=strncasecmp
+0 44
+fn=strncasecmp_l
+0 22
+fn=strncmp
+0 44
+fn=strncpy
+0 21
+fn=strnlen
+0 50
+fn=strpbrk
+0 7
+fn=strspn
+0 7
+fn=strtod
+0 5
+fn=sysconf
+0 46
+fn=wcpncpy
+0 18
+fn=wcscat
+0 18
+fn=wcschr
+0 50
+fn=wcscmp
+0 25
+fn=wcscpy
+0 17
+fn=wcslen
+0 20
+fn=wcsncpy
+0 18
+fn=wcsnlen
+0 20
+fn=wmemchr
+0 42
+fn=wmemcmp
+0 25
+fn=wmemset
+0 38
+fn=write
+0 12
+summary: 290239387

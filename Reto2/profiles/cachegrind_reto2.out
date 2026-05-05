@@ -1,0 +1,190 @@
+cmd: /home/georgekonrad/Desktop/HPC_Matrices/Reto2/reto2 1000000 200 0.3 1
+events: Ir
+fl=???
+fn=(below main)
+0 84
+fn=???
+0 201172249
+fn=_Exit
+0 5
+fn=_IO_do_write
+0 3430
+fn=_IO_doallocbuf
+0 23
+fn=_IO_file_doallocate
+0 64
+fn=_IO_file_overflow
+0 11063
+fn=_IO_file_setbuf
+0 18
+fn=_IO_file_stat
+0 3
+fn=_IO_file_sync
+0 21
+fn=_IO_file_write
+0 9555
+fn=_IO_file_xsputn
+0 46
+fn=_IO_flush_all
+0 195
+fn=_IO_setb
+0 19
+fn=__call_tls_dtors
+0 13
+fn=__ctype_init
+0 17
+fn=__cxa_atexit
+0 3
+fn=__cxa_finalize
+0 116
+fn=__default_morecore
+0 20
+fn=__errno_location
+0 12
+fn=__isoc23_strtoul
+0 18
+fn=__libc_alloca_cutoff
+0 33
+fn=__libc_early_init
+0 53
+fn=__memcpy_chk
+0 24
+fn=__memmove_chk
+0 24
+fn=__mempcpy_chk
+0 24
+fn=__memset_chk
+0 25
+fn=__overflow
+0 2696
+fn=__sigsetjmp
+0 22
+fn=__tunable_get_val
+0 588
+fn=_dl_allocate_tls_init
+0 107
+fn=_dl_audit_preinit
+0 5
+fn=_dl_catch_exception
+0 132
+fn=_dl_debug_state
+0 4
+fn=_setjmp
+0 3
+fn=bcmp
+0 25
+fn=brk
+0 18
+fn=calloc
+0 32
+fn=clock_gettime
+0 22
+fn=exit
+0 7
+fn=free
+0 60
+fn=fstat
+0 6
+fn=getrlimit
+0 10
+fn=index
+0 21
+fn=main
+0 1526293565
+fn=malloc
+0 22
+fn=memchr
+0 21
+fn=memcpy
+0 24
+fn=memmove
+0 24
+fn=mempcpy
+0 24
+fn=memrchr
+0 25
+fn=memset
+0 50
+fn=mmap
+0 78
+fn=munmap
+0 18
+fn=parseSizeT
+0 70
+fn=printf
+0 80
+fn=pthread_mutex_lock
+0 38
+fn=pthread_mutex_unlock
+0 3
+fn=putc
+0 21999290
+fn=putchar
+0 45
+fn=puts
+0 71
+fn=rindex
+0 25
+fn=sbrk
+0 50
+fn=stpcpy
+0 19
+fn=stpncpy
+0 21
+fn=strcasecmp
+0 22
+fn=strcasecmp_l
+0 22
+fn=strcat
+0 19
+fn=strchrnul
+0 25
+fn=strcmp
+0 40
+fn=strcpy
+0 19
+fn=strcspn
+0 7
+fn=strlen
+0 25
+fn=strncasecmp
+0 22
+fn=strncasecmp_l
+0 22
+fn=strncmp
+0 22
+fn=strncpy
+0 21
+fn=strnlen
+0 50
+fn=strpbrk
+0 7
+fn=strspn
+0 7
+fn=strtod
+0 5
+fn=wcpncpy
+0 18
+fn=wcscat
+0 18
+fn=wcschr
+0 50
+fn=wcscmp
+0 25
+fn=wcscpy
+0 17
+fn=wcslen
+0 20
+fn=wcsncpy
+0 18
+fn=wcsnlen
+0 20
+fn=wmemchr
+0 42
+fn=wmemcmp
+0 25
+fn=wmemset
+0 38
+fn=write
+0 2940
+summary: 1749498044

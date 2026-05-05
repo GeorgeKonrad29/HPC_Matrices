@@ -1,0 +1,51 @@
+--------------------------------------------------------------------------------
+-- Metadata
+--------------------------------------------------------------------------------
+Invocation:       /usr/bin/cg_annotate /home/georgekonrad/Desktop/HPC_Matrices/Reto2/profiles/cachegrind_reto2.out
+Command:          /home/georgekonrad/Desktop/HPC_Matrices/Reto2/reto2 1000000 200 0.3 1
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Threshold:        0.1%
+Annotation:       on
+
+--------------------------------------------------------------------------------
+-- Summary
+--------------------------------------------------------------------------------
+Ir____________________ 
+
+1,749,498,044 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+-- File:function summary
+--------------------------------------------------------------------------------
+  Ir____________________________  file:function
+
+< 1,749,498,044 (100.0%, 100.0%)  ???:
+  1,526,293,565  (87.2%)            main
+    201,172,249  (11.5%)            ???
+     21,999,290   (1.3%)            putc
+
+--------------------------------------------------------------------------------
+-- Function:file summary
+--------------------------------------------------------------------------------
+  Ir___________________________  function:file
+
+> 1,526,293,565 (87.2%,  87.2%)  main:???
+
+>   201,172,249 (11.5%,  98.7%)  ???:???
+
+>    21,999,290  (1.3%, 100.0%)  putc:???
+
+--------------------------------------------------------------------------------
+-- Annotation summary
+--------------------------------------------------------------------------------
+Ir____________________ 
+
+            0             annotated: files known & above threshold & readable, line numbers known
+            0             annotated: files known & above threshold & readable, line numbers unknown
+            0           unannotated: files known & above threshold & two or more non-identical
+            0           unannotated: files known & above threshold & unreadable 
+            0           unannotated: files known & below threshold
+1,749,498,044 (100.0%)  unannotated: files unknown
+

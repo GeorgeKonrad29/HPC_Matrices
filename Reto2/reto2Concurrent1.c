@@ -63,8 +63,8 @@ static void shuffleIndices(size_t *indices, size_t count, uint32_t seed) {
 		return;
 	}
 
-	for (size_t i = count - 1; i > 0; --i) {
-		size_t j = (size_t)(rngNext(&state) % (uint32_t)(i + 1));
+	for (size_t i = count; i > 0; --i) {
+		size_t j = (size_t)((rngNext(&state) % (uint32_t)i)+1);
 		size_t tmp = indices[i];
 		indices[i] = indices[j];
 		indices[j] = tmp;
@@ -72,12 +72,12 @@ static void shuffleIndices(size_t *indices, size_t count, uint32_t seed) {
 }
 
 static int initializeRoad(unsigned char *road, size_t cellCount, double density, uint32_t seed, size_t *carsOut) {
-	size_t *indices = (size_t *)malloc(cellCount * sizeof(size_t));
+	size_t *indices = (size_t *)malloc((cellCount + 2) * sizeof(size_t));
 	if (indices == NULL) {
 		return 0;
 	}
 
-	for (size_t i = 0; i < cellCount; ++i) {
+	for (size_t i = 1; i <= cellCount; ++i) {
 		indices[i] = i;
 	}
 
@@ -88,10 +88,12 @@ static int initializeRoad(unsigned char *road, size_t cellCount, double density,
 		carCount = cellCount;
 	}
 
-	memset(road, 0, cellCount * sizeof(unsigned char));
-	for (size_t i = 0; i < carCount; ++i) {
+	memset(road, 0, (cellCount + 2) * sizeof(unsigned char));
+	for (size_t i = 1; i <= carCount; ++i) {
 		road[indices[i]] = 1u;
 	}
+	road[0] = road[cellCount];
+	road[cellCount + 1] = road[1];
 
 	free(indices);
 	*carsOut = carCount;
@@ -100,52 +102,41 @@ static int initializeRoad(unsigned char *road, size_t cellCount, double density,
 
 static size_t advanceRoad(const unsigned char *currentRoad, unsigned char *nextRoad, size_t cellCount) {
     unsigned long long moved_ull = 0ULL;
-	/*
-    // Crear buffers con ghost cells
-    unsigned char *padded = (unsigned char *)calloc(cellCount + 2, sizeof(unsigned char));
-    if (padded == NULL) return 0;
 
-    // Copiar datos reales y poblar ghost cells (periódico)
-    padded[0] = currentRoad[cellCount - 1];  // ghost cell izq = última celda real
-    for (size_t i = 0; i < cellCount; ++i) {
-        padded[i + 1] = currentRoad[i];
-    }
-    padded[cellCount + 1] = currentRoad[0];  // ghost cell der = primera celda real
-	*/
     // Loop SIN condicionales 
     #pragma omp parallel for schedule(static) reduction(+: moved_ull)
     for (size_t j = 1; j <= cellCount; ++j) {
-        unsigned char self       = padded[j];
-        unsigned char left       = padded[j - 1];
-        unsigned char right      = padded[j + 1];
-        unsigned char right_free = (right == 0);
+        unsigned char self_occupied       = currentRoad[j];
+        unsigned char left_occupied       = currentRoad[j - 1];
+        unsigned char right_occupied      = currentRoad[j + 1];
 
         // Lógica idéntica, pero sin calcular left/right con condicionales
-        if (left && !self) {
-            nextRoad[j - 1] = 1u;
+        if (left_occupied && !self_occupied) {
+            nextRoad[j] = 1u;
             moved_ull += 1ULL;
-        } 
-        else if (self && !right_free) {
-            nextRoad[j - 1] = 1u;
+        }
+        else if (self_occupied && right_occupied) {
+            nextRoad[j] = 1u;
         }
         else {
-            nextRoad[j - 1] = 0u;
+            nextRoad[j] = 0u;
         }
     }
+	nextRoad[0] = nextRoad[cellCount];
+	nextRoad[cellCount + 1] = nextRoad[1];
 
-    free(padded);
     return (size_t)moved_ull;
 }
 
 static void printRoad(const unsigned char *road, size_t cellCount) {
-	for (size_t i = 0; i < cellCount; ++i) {
+	for (size_t i = 1; i <= cellCount; ++i) {
 		putchar(road[i] ? '1' : '0');
 	}
 	putchar('\n');
 }
 
 int main(int argc, char *argv[]) {
-	size_t cellCount = 100;
+	size_t cellCount = 128;
 	size_t stepCount = 50;
 	double initialDensity = 0.30;
 	uint32_t rngSeed = 1u;
@@ -194,8 +185,8 @@ int main(int argc, char *argv[]) {
 		return EXIT_FAILURE;
 	}
 
-	unsigned char *currentRoad = (unsigned char *)calloc(cellCount, sizeof(unsigned char));
-	unsigned char *nextRoad = (unsigned char *)calloc(cellCount, sizeof(unsigned char));
+	unsigned char *currentRoad = (unsigned char *)calloc(cellCount + 2, sizeof(unsigned char));
+	unsigned char *nextRoad = (unsigned char *)calloc(cellCount + 2, sizeof(unsigned char));
 	if (currentRoad == NULL || nextRoad == NULL) {
 		fprintf(stderr, "Error: unable to allocate memory for the road.\n");
 		free(currentRoad);
@@ -220,15 +211,6 @@ int main(int argc, char *argv[]) {
 		return EXIT_FAILURE;
 	}
 
-	/*printf("Serial traffic simulation on a periodic road\n");
-	printf("Cells: %zu\n", cellCount);
-	printf("Steps: %zu\n", stepCount);
-	printf("Target density: %.4f\n", initialDensity);
-	printf("Seed: %u\n", rngSeed);
-	printf("Initial cars: %zu\n", totalCars);
-	printf("\n");
-	printf("Step   Moved   AvgVelocity\n");
-	printf("----   -----   -----------\n");*/
     if (clock_gettime(CLOCK_MONOTONIC, &startTime) != 0) {
 		fprintf(stderr, "Error: unable to read CLOCK_MONOTONIC.\n");
 		free(currentRoad);
@@ -240,7 +222,7 @@ int main(int argc, char *argv[]) {
 		size_t moved = advanceRoad(currentRoad, nextRoad, cellCount);
 		double averageVelocity = (totalCars > 0) ? ((double)moved / (double)totalCars) : 0.0;
 
-		if(cellCount <= 100) {
+		if(cellCount <= 128) {
 			printf("%4zu   %5zu   %11.6f\n", step, moved, averageVelocity);
 			printRoad(currentRoad, cellCount);
 		}
@@ -261,7 +243,6 @@ int main(int argc, char *argv[]) {
 
 	printf("\n");
 	printf("Final road state:\n");
-	//printRoad(currentRoad, cellCount);
     printf("%zu,%zu,%.2f,%d,%.6f\n", 
             cellCount, stepCount, initialDensity, 4, elapsedSeconds);
 
